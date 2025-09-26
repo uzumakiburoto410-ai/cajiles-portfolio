@@ -1,4 +1,4 @@
-// Smooth scroll for nav links
+
 document.querySelectorAll("nav ul li a").forEach(link => {
     link.addEventListener("click", e => {
         if (link.getAttribute("href").startsWith("#")) {
@@ -9,7 +9,7 @@ document.querySelectorAll("nav ul li a").forEach(link => {
     });
 });
 
-// Typing effect in hero section
+
 const text = "Front-End Web Developer | Designer | Student";
 let i = 0;
 const speed = 80;
@@ -25,7 +25,6 @@ function typeEffect() {
 heroText.textContent = "";
 typeEffect();
 
-// Animate navbar color on scroll
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
     if (window.scrollY > 50) {
@@ -35,3 +34,4 @@ window.addEventListener("scroll", () => {
         header.style.background = "rgba(30, 30, 47, 0.9)";
     }
 });
+
