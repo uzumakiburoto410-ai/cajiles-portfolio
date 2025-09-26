@@ -1,6 +1,7 @@
 CAJILES, ALVIN M.
 
 REFLECTION
+
 Working on this portfolio has been both a challenge and a chance to learn. One of the main difficulties I faced was organizing my projects in a consistent and professional way. At first, my repositories had different structures, incomplete documentation, and unclear explanations, which made it harder to present my work. To fix this, I created a standard format for my READMEs. This format includes sections like description, installation steps, screenshots, and demo links. It helped bring clarity and uniformity across my projects.
 
 Another challenge was deployment, especially when builds worked locally but failed on platforms like GitHub Pages or Netlify. I tackled this by learning how to replicate production environments, manage environment variables properly, and follow a checklist before publishing.
