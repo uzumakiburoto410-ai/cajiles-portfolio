@@ -1,4 +1,4 @@
-/* ========== RESET ========== */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ========== HEADER ========== */
+
 header {
   background: rgba(30, 30, 47, 0.9);
   color: #fff;
@@ -68,7 +68,7 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* ========== HERO ========== */
+
 #hero {
   text-align: center;
   padding: 120px 20px;
@@ -104,7 +104,6 @@ nav ul li a:hover::after {
   transform: translateY(-3px);
 }
 
-/* ========== PROFILE ========== */
 #profile {
   display: flex;
   justify-content: center;
@@ -131,7 +130,7 @@ nav ul li a:hover::after {
   font-weight: 600;
 }
 
-/* ========== ABOUT ========== */
+
 #about {
   padding: 80px 20px;
   background: #f8faff;
@@ -151,7 +150,6 @@ nav ul li a:hover::after {
   opacity: 0.8;
 }
 
-/* ========== PROJECTS ========== */
 #projects {
   padding: 80px 30px;
   text-align: center;
@@ -188,7 +186,6 @@ nav ul li a:hover::after {
   margin-bottom: 15px;
 }
 
-/* ========== CONTACT ========== */
 #contact {
   padding: 80px 20px;
   background: linear-gradient(135deg, #764ba2, #667eea);
@@ -211,7 +208,7 @@ nav ul li a:hover::after {
   text-decoration: underline;
 }
 
-/* ========== FOOTER ========== */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -219,3 +216,4 @@ footer {
   color: #aaa;
   font-size: 0.9rem;
 }
+
