@@ -34,4 +34,3 @@ window.addEventListener("scroll", () => {
         header.style.background = "rgba(30, 30, 47, 0.9)";
     }
 });
-
