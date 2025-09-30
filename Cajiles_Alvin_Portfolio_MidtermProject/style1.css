@@ -3,215 +3,217 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background: #fdfdfd;
-  color: #333;
-  overflow-x: hidden;
-}
-
-
-header {
-  background: rgba(30, 30, 47, 0.9);
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
   color: #fff;
-  padding: 15px 50px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
+  line-height: 1.6;
 }
+
 
 nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
 }
 
-header h1 {
-  font-size: 1.4rem;
-  font-weight: 600;
+nav h1 {
+  font-size: 1.5rem;
+  color: #f0a500;
+  font-weight: bold;
   letter-spacing: 2px;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
-}
-
-nav ul li {
-  margin-left: 25px;
+  display: flex;
+  gap: 1.5rem;
 }
 
 nav ul li a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   font-weight: 500;
-  position: relative;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #00d4ff;
-  transition: width 0.3s;
+nav ul li a:hover {
+  color: #f0a500;
 }
 
-nav ul li a:hover::after {
-  width: 100%;
+
+#profile {
+  text-align: center;
+  padding: 7rem 1rem 3rem;
+}
+
+#profile img {
+  border-radius: 50%;
+  border: 5px solid #f0a500;
+  box-shadow: 0px 0px 30px rgba(240, 165, 0, 0.7);
+  transition: transform 0.5s ease;
+}
+
+#profile img:hover {
+  transform: scale(1.05);
+}
+
+#profile h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
 }
 
 #hero {
   text-align: center;
-  padding: 120px 20px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: #fff;
+  padding: 3rem 1rem;
 }
 
 #hero h2 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: #f0a500;
+  animation: fadeInDown 1s ease;
 }
 
 #hero p {
-  font-size: 1.3rem;
-  margin-bottom: 25px;
-  opacity: 0.9;
+  margin: 1rem 0;
+  font-size: 1.2rem;
 }
 
 .btn {
-  background: #fff;
-  color: #667eea;
-  padding: 12px 28px;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #f0a500;
+  color: #16213e;
   border-radius: 30px;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #00d4ff;
-  color: #fff;
+  background: #fff;
+  color: #0f3460;
   transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(240, 165, 0, 0.4);
 }
 
-#profile {
-  display: flex;
-  justify-content: center;
-  padding: 60px 20px;
-}
-
-.profile {
-  text-align: center;
-}
-
-.profile img {
-  border-radius: 20px;
-  box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
-  transition: transform 0.4s ease;
-}
-
-.profile img:hover {
-  transform: scale(1.08) rotate(-2deg);
-}
-
-.profile h2 {
-  margin-top: 15px;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
 
 #about {
-  padding: 80px 20px;
-  background: #f8faff;
+  padding: 4rem 2rem;
   text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  margin: 2rem;
+  animation: fadeIn 1.5s ease;
 }
 
 #about h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: #667eea;
-}
-
-#about p {
-  max-width: 750px;
-  margin: auto;
-  font-size: 1.1rem;
-  opacity: 0.8;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f0a500;
 }
 
 
 #projects {
-  padding: 80px 30px;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 #projects h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: #764ba2;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f0a500;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }
 
 .project-card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0px 8px 25px rgba(0,0,0,0.1);
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1s ease;
 }
 
 .project-card img {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  margin: 0.5rem 0;
+  color: #f0a500;
+}
+
+#resume {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#resume h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f0a500;
 }
 
 
 #contact {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #764ba2, #667eea);
-  color: #fff;
+  padding: 4rem 2rem;
   text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  margin: 2rem;
 }
 
 #contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-#contact a {
-  color: #00d4ff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-#contact a:hover {
-  text-decoration: underline;
+  color: #f0a500;
+  margin-bottom: 1rem;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: #111;
-  color: #aaa;
-  font-size: 0.9rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
 }

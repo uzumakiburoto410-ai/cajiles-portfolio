@@ -1,36 +1,33 @@
 
 document.querySelectorAll("nav ul li a").forEach(link => {
-    link.addEventListener("click", e => {
-        if (link.getAttribute("href").startsWith("#")) {
-            e.preventDefault();
-            document.querySelector(link.getAttribute("href"))
-                .scrollIntoView({ behavior: "smooth" });
-        }
-    });
+  link.addEventListener("click", e => {
+    if (link.hash) {
+      e.preventDefault();
+      document.querySelector(link.hash).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
 });
 
-
-const text = "Front-End Web Developer | Designer | Student";
-let i = 0;
-const speed = 80;
-const heroText = document.querySelector("#hero p");
-
-function typeEffect() {
-    if (i < text.length) {
-        heroText.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, speed);
-    }
-}
-heroText.textContent = "";
-typeEffect();
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
 
 window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    if (window.scrollY > 50) {
-        header.style.background = "rgba(17, 17, 17, 0.95)";
-        header.style.transition = "0.4s";
-    } else {
-        header.style.background = "rgba(30, 30, 47, 0.9)";
+  let current = "";
+  sections.forEach(sec => {
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
+    if (top >= offset && top < offset + height) {
+      current = sec.getAttribute("id");
     }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
